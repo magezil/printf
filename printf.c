@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	};
 
 	if (format == NULL)
-		return (0);
+		return (-1);
 	va_start(args, format);
 	current = format[i];
 	while (current != '\0')
@@ -39,7 +39,8 @@ int _printf(const char *format, ...)
 				count += prints[j].f(args);
 			else
 			{
-				count += _putchar('%');
+				if (current != '%')
+					count += _putchar('%');
 				count += _putchar(current);
 			}
 		}
