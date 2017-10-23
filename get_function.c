@@ -2,7 +2,9 @@
 
 /**
  * get_print_function - determines which function to use to print
- * 
+ * @format: how to format output
+ * @prints: array of print_t structs
+ * @args: va_list of arguments to print
  *
  * Return: number of characters printed
  */
