@@ -49,5 +49,6 @@ int _printf(const char *format, ...)
 		i++;
 		current = format[i];
 	}
+	va_end(args);
 	return (count);
 }
