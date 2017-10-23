@@ -39,5 +39,6 @@ int print_string(va_list args)
  */
 int _putchar(char c)
 {
+	/* write returns number of characters it prints */
 	return (write(1, &c, 1));
 }
