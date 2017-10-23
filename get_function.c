@@ -31,8 +31,7 @@ int get_print_function(const char *format, print_t *prints, va_list args)
 					return (-1); /* reset i to index before last */
 				if (current != '%')
 					count += _putchar('%');
-				else
-					count += _putchar(current);
+				count += _putchar(current);
 			}
 		}
 		else
