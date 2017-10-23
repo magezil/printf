@@ -21,7 +21,7 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_number(va_list args);
 int print_binary(va_list args);
-int binary(int num);
+int binary(unsigned long int num);
 int _strlen(char *s);
 int _putchar(char c);
 
