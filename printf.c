@@ -12,12 +12,12 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	char current;
-	int count = 0;
-	int i = 0;
-	int j = 0;
+	int count = 0, i = 0, j = 0;
 	print_t prints[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"i", print_number},
+		{"d", print_number},
 		{NULL, NULL}
 	};
 
@@ -40,13 +40,12 @@ int _printf(const char *format, ...)
 			{
 				if (current != '%')
 					count += _putchar('%');
+				/* TODO: check for ' ' after %*/
 				count += _putchar(current);
 			}
 		}
 		else
-		{
 			count += _putchar(current);
-		}
 		i++;
 		current = format[i];
 	}

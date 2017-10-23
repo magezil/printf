@@ -1,4 +1,3 @@
-#include <stdarg.h>
 #include <unistd.h>
 #include "holberton.h"
 
@@ -10,7 +9,7 @@
  */
 int print_char(va_list args)
 {
-        return (_putchar(va_arg(args, int)));
+	return (_putchar(va_arg(args, int)));
 }
 
 /**
@@ -21,29 +20,15 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-        int len;
-        char *str = va_arg(args, char *);
+	int len;
+	char *str = va_arg(args, char *);
 
-        if (str == NULL)
-                str = "(null)";
-        len = _strlen(str);
-        write(1, str, len);
-        return (len);
-}
-
-/**
- * _strlen - gets length of a string
- * @str: string to compute length of
- *
- * Return: length of string
- */
-int _strlen(char *str)
-{
-        int i = 0;
-
-        while (str[i] != '\0')
-                i++;
-        return (i);
+	if (str == NULL)
+		str = "(null)";
+	len = 0;
+	while (str[len] != '\0')
+		len += _putchar(str[len]);
+	return (len);
 }
 
 /**
@@ -54,5 +39,5 @@ int _strlen(char *str)
  */
 int _putchar(char c)
 {
-        return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
