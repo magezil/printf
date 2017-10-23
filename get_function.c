@@ -27,9 +27,12 @@ int get_print_function(const char *format, print_t *prints, va_list args)
 				count += prints[j].f(args);
 			else
 			{
-				if (current != '%' && current != '\0')
+				if (current == '\0')
+					i--; /* reset i to index before last */
+				else if (current != '%')
 					count += _putchar('%');
-				count += _putchar(current);
+				else
+					count += _putchar(current);
 			}
 		}
 		else
