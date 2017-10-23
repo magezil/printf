@@ -28,8 +28,8 @@ int get_print_function(const char *format, print_t *prints, va_list args)
 			else
 			{
 				if (current == '\0')
-					i--; /* reset i to index before last */
-				else if (current != '%')
+					return (-1); /* reset i to index before last */
+				if (current != '%')
 					count += _putchar('%');
 				else
 					count += _putchar(current);
