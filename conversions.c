@@ -2,7 +2,7 @@
 
 /**
  * print_binary - print number in binary representation
- * @va_list: list to retrieve number to convert and print
+ * @args: list to retrieve number to convert and print
  *
  * Return: number of chars printed
  */
@@ -46,10 +46,5 @@ int binary(int num)
 			count += _putchar('0');
 		mask = mask >> 1;
 	}
-	return count;
-/*	if (num / 2 == 0)
-		return (_putchar(num % 2 + '0'));
-	if (num / 2 == 1)
-		return (_putchar(num / 2 + '0') + _putchar(num % 2 + '0'));
-	return (binary(num / 2) + _putchar(num % 2 + '0'));*/
+	return (count);
 }
