@@ -25,7 +25,7 @@ int binary(int num)
 
 	if (num < 0)
 	{
-		num = -num;
+		num = -1 * num;
 		neg = 1;
 	}
 	while (mask < num)
@@ -35,7 +35,7 @@ int binary(int num)
 	}
 
 	if (neg)
-		num = -num;
+		num = -1 * num;
 	else
 		mask = mask >> 1;
 	while (mask != 0)
