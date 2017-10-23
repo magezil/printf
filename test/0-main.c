@@ -7,6 +7,9 @@ int main(void)
 	int len1;
 	int len2;
 
+	printf("%");
+	_printf("%");
+	_printf("\n");
 	/* Test format string is NULL - no output expected */
 	len1 = printf(NULL);
 	len2 = _printf(NULL);
