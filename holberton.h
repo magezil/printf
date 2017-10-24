@@ -1,34 +1,31 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
- * struct print_functions - Struct for print_functions
+ * struct print_functions - print functions
  *
- * @type: The format to print
- * @f: The print function to use
+ * @type: print format
+ * @f: print function
  */
 typedef struct print_functions
 {
 	char *type;
 	int (*f)();
-} print_t;
+} types_t;
 
-int _printf(const char *format, ...);
-int get_print_function(const char *format, print_t *prints, va_list args);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_string_hex(va_list args);
-int print_number(va_list args);
-int print_binary(va_list args);
-int print_unsignedi(va_list args);
-int print_hex(va_list args);
-int print_hex_cap(va_list args);
-int print_oct(va_list args);
-int convert(unsigned int num, unsigned int base);
-int convert2(unsigned int num, unsigned int base, char ten);
-int _strlen(char *s);
 int _putchar(char c);
+int _printf(const char *format, ...);
+int print_number(va_list arguments);
+int print_string(va_list arguments);
+int print_character(va_list arguments);
+/* int print_float(va_list arguments); */
+int get_functions(const char *format, types_t types, va_list arguments);
+int print_rot13(va_list arguments);
+int print_str_rev(va_list arguments);
 
-#endif /* HOLBERTON_H */
+#endif
