@@ -85,7 +85,7 @@ int convert2(unsigned int num, unsigned int base, char ten)
 	if (div < base)
 	{
 		if (div > 10)
-			return (_putchar(div + ten) + _putchar(next));
+			return (_putchar(div - 10 + ten) + _putchar(next));
 		return (_putchar(div + '0') + _putchar(next));
 	}
 	
