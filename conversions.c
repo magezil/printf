@@ -64,6 +64,7 @@ int convert(unsigned int num, unsigned int base)
  * convert2 - recursive function to print from base 10 to given base > 10
  * @num: number to convert
  * @base: base greater than 10 to convert to
+ * @ten: character to replace 10 ('A' or 'a')
  *
  * Return: number of chars printed
  */
@@ -77,7 +78,7 @@ int convert2(unsigned int num, unsigned int base, char ten)
 		next = (rem - 10) + ten;
 	else
 		next = rem + '0';
-	
+
 	if (div == 0)
 	{
 		return (_putchar(next));
@@ -88,6 +89,6 @@ int convert2(unsigned int num, unsigned int base, char ten)
 			return (_putchar(div - 10 + ten) + _putchar(next));
 		return (_putchar(div + '0') + _putchar(next));
 	}
-	
+
 	return (convert2(div, base, ten) + _putchar(next));
 }
