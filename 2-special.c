@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * print_rot13 - print rot13
  *
@@ -11,17 +10,18 @@ int print_rot13(va_list arguments)
 {
 	int i;
 	int count;
+	char *s;
 
 	i = 0;
 	count = 0;
-	s = va_list(arguments);
+	s = va_arg(arguments, char *);
 
 	if (s == NULL)
-		s == ("null");
+		return (-1);
 
 	while (s[i] != '\0')
 	{
-		while ((s[i] >= 'a' && s[i] <= 'z') ||
+		if ((s[i] >= 'a' && s[i] <= 'z') ||
 		       (s[i] >= 'A' && s[i] <= 'Z'))
 		{
 			if ((s[i] >= 'N' && s[i] <= 'Z') ||
@@ -29,8 +29,9 @@ int print_rot13(va_list arguments)
 				count += _putchar(s[i] - 13);
 			else
 				count += _putchar(s[i] + 13);
-			i++;
 		}
+		else
+			count += _putchar(s[i]);
 		i++;
 	}
 	return (count);
@@ -46,8 +47,14 @@ int print_str_rev(va_list arguments)
 {
 	int i;
 	int count;
+	char *s;
 
 	i = 0;
+	s = va_arg(arguments, char *);
+	
+	if (s == NULL)
+		return (-1);
+	
 	while (s[i] != '\0')
 		i++;
 	i--;

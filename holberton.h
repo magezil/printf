@@ -26,6 +26,10 @@ int print_unsignedi(va_list args);
 int print_hex(va_list args);
 int print_hex_cap(va_list args);
 int print_oct(va_list args);
+int print_address(va_list args);
+int print_rot13(va_list arguments);
+int print_str_rev(va_list arguments);
+
 int convert(unsigned int num, unsigned int base);
 int convert2(unsigned int num, unsigned int base, char ten);
 int _strlen(char *s);
