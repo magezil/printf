@@ -45,20 +45,25 @@ int print_rot13(va_list arguments)
  */
 int print_str_rev(va_list arguments)
 {
-	int i;
-	int count;
 	char *s;
 
-	i = 0;
 	s = va_arg(arguments, char *);
 
 	if (s == NULL)
 		return (-1);
 
-	while (s[i] != '\0')
-		i++;
-	i--;
-	while (i >= 0)
-		count += _putchar(s[i--]);
-	return (count);
+	return (print_rev(s));
+}
+
+/**
+ * print_rev - print string in reverse
+ * @s: string to reverse
+ *
+ * Return: character count
+ */
+int print_rev(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (print_rev(s + 1) + _putchar(*s));
 }
