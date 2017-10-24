@@ -51,10 +51,10 @@ int print_str_rev(va_list arguments)
 
 	i = 0;
 	s = va_arg(arguments, char *);
-	
+
 	if (s == NULL)
 		return (-1);
-	
+
 	while (s[i] != '\0')
 		i++;
 	i--;
