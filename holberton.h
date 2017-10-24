@@ -26,7 +26,6 @@ int print_unsignedi(va_list args);
 int print_hex(va_list args);
 int print_hex_cap(va_list args);
 int print_oct(va_list args);
-int print_address(va_list args);
 int print_rot13(va_list arguments);
 int print_str_rev(va_list arguments);
 
