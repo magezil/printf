@@ -33,3 +33,28 @@ int print_number(va_list args)
 
 	return (len);
 }
+
+/**
+ * print_unsignedi - print given unsigned number
+ * @args: list to retrieve number from
+ *
+ * Return: number of chars printed
+ */
+int print_unsignedi(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	int div = 1;
+	int len = 0;
+
+	while (num / div > 9)
+		div *= 10;
+
+	while (div != 0)
+	{
+		len += _putchar('0' + num / div);
+		num %= div;
+		div /= 10;
+	}
+
+	return (len);
+}

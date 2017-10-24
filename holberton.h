@@ -21,7 +21,12 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_number(va_list args);
 int print_binary(va_list args);
-int binary(unsigned long int num);
+int print_unsignedi(va_list args);
+int print_hex(va_list args);
+int print_hex_cap(va_list args);
+int print_oct(va_list args);
+int convert(unsigned int num, unsigned int base);
+int convert2(unsigned int num, unsigned int base, char ten);
 int _strlen(char *s);
 int _putchar(char c);
 

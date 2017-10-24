@@ -17,6 +17,10 @@ int _printf(const char *format, ...)
 		{"i", print_number},
 		{"d", print_number},
 		{"b", print_binary},
+		{"u", print_unsignedi},
+		{"x", print_hex}, 
+		{"X", print_hex_cap}, 
+		{"o", print_oct},
 		{NULL, NULL}
 	};
 
