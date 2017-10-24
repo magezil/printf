@@ -18,13 +18,13 @@ int _printf(const char *format, ...)
 		{"d", print_number},
 		{"b", print_binary},
 		{"u", print_unsignedi},
-		{"x", print_hex}, 
-		{"X", print_hex_cap}, 
+		{"x", print_hex},
+		{"X", print_hex_cap},
 		{"o", print_oct},
 		{"S", print_string_hex},
 		{"p", print_address},
 		{"r", print_str_rev},
-		{"R", print_rot13}, 
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 

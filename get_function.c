@@ -28,7 +28,7 @@ int get_print_function(const char *format, print_t *prints, va_list args)
 			else
 			{
 				if (current == '\0')
-					return (-1); 
+					return (-1);
 				if (current != '%')
 					count += _putchar('%');
 				count += _putchar(current);
