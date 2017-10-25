@@ -1,0 +1,55 @@
+.TH _PRINTF 3 "24 October 2017" "v1.5" "_printf manual"
+.SH NAME
+_printf() - takes input and prints to standard output, and uses format
+specifiers to convert arguments into strings
+.SH SYNOPSIS
+.B _printf
+.I FORMAT [ARGUMENT]
+.B ...
+.SH DESCRIPTION
+The '_printf' function takes in characters, strings, and number as
+.I FORMAT
+specifiers and outputs them to the command line.
+
+FORMAT outputs a specified format relative to the specifier input.
+
+.B %c
+Writes a character
+
+.B %s
+Writes a string of characters
+
+.B %%
+Displays a single '%' character
+
+.B %d
+Converts argument to signed decimal notation and displays
+
+.B %i
+Converts argument to unsigned decimal notation and displays
+
+.B %b
+Presents inputted number in binary form
+
+.B %x
+Presents inputted number in lowercase hexadecimal form
+
+.B %X
+Presents inputted number in uppercase hexadecimal form
+
+.B %o
+Presents inputted number in octal form
+
+.B %S
+Presents inputted strings in hexadecimal form
+
+.B %r
+Writes a string of characters in reverse
+
+.B %R
+Converts inputted string in 'rot13' substitution form
+
+.SH BUGS
+Raided, squashed, and zapped
+.SH AUTHORS
+Liz the Whiz and Jerel the Parallel

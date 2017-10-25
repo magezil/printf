@@ -23,7 +23,7 @@ int print_string(va_list arguments)
 	str = va_list(arguments, char *);
 
 	if (str == NULL)
-		str == ("null");
+		str = ("null");
 
 	return(_putchar(va_list(arguments, int)));
 }
