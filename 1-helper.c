@@ -21,7 +21,7 @@ int print_number(va_list args)
 	else
 		num = n;
 
-	while (num / div >= 9)
+	while (num / div > 9)
 		div *= 10;
 
 	while (div != 0)
